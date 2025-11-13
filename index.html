@@ -1,1 +1,176 @@
-"Maibok" 
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สิริรัฐ โตทุ้ย</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to top right, #a2d2ff, #ffc8dd, #cdb4db);
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 50px 70px;
+            border-radius: 30px;
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+            border: 3px solid #ffe5ec;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h1 {
+            color: #ff6f91;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+        }
+
+        p {
+            color: #6d597a;
+            font-size: 1.3em;
+        }
+
+        /* ☁️ เมฆลอย */
+        .cloud {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.8;
+            animation: float 20s linear infinite;
+        }
+        .cloud:nth-child(1) { top: 10%; left: -10%; animation-delay: 0s; }
+        .cloud:nth-child(2) { top: 20%; left: -20%; animation-delay: 5s; }
+        .cloud:nth-child(3) { top: 30%; left: -15%; animation-delay: 10s; }
+
+        /* 🐦 นกบิน */
+        .bird {
+            position: absolute;
+            font-size: 30px;
+            animation: fly 15s linear infinite;
+        }
+
+        .bird:nth-child(4) { top: 15%; animation-delay: 0s; }
+        .bird:nth-child(5) { top: 25%; animation-delay: 5s; }
+        .bird:nth-child(6) { top: 35%; animation-delay: 10s; }
+
+        /* 💧 น้ำตก */
+        .waterfall {
+            position: absolute;
+            right: 10%;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                rgba(173, 216, 230, 0.5) 30%,
+                rgba(173, 216, 230, 0.8) 100%);
+            border-radius: 20px;
+            animation: flow 2s linear infinite;
+        }
+
+        /* 🌊 แม่น้ำ */
+        .river {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(180deg,
+                rgba(173, 216, 230, 0.6) 0%,
+                rgba(135, 206, 250, 0.8) 100%);
+            animation: wave 3s ease-in-out infinite;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        /* 🦋 ผีเสื้อ */
+        .butterfly {
+            position: absolute;
+            font-size: 25px;
+            animation: flutter 10s ease-in-out infinite;
+        }
+
+        .butterfly:nth-child(7) { top: 40%; left: 10%; animation-delay: 0s; }
+        .butterfly:nth-child(8) { top: 50%; left: 70%; animation-delay: 4s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fly {
+            0% { left: -5%; }
+            100% { left: 105%; }
+        }
+
+        @keyframes float {
+            0% { left: -10%; }
+            100% { left: 110%; }
+        }
+
+        @keyframes flow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes flutter {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- ☁️ เมฆ -->
+    <div class="cloud">☁️</div>
+    <div class="cloud">☁️</div>
+    <div class="cloud">☁️</div>
+
+    <!-- 🐦 นกบิน -->
+    <div class="bird">🐦</div>
+    <div class="bird">🕊️</div>
+    <div class="bird">🐧</div>
+
+    <!-- 💧 น้ำตก -->
+    <div class="waterfall"></div>
+
+    <!-- 🌊 แม่น้ำ -->
+    <div class="river"></div>
+
+    <!-- 🦋 ผีเสื้อ -->
+    <div class="butterfly">🦋</div>
+    <div class="butterfly">🦋</div>
+
+    <!-- 💌 เนื้อหาหลัก -->
+    <div class="container">
+        <div class="card">
+            <h1>H A L O 💖</h1>
+            <p>MY name <b>sirirat tothui</b></p>
+            <p style="margin-top: 15px;">ยินดีที่ได้รู้จักและขอบคุณที่เข้ามาเยี่ยมชม Github ของฉัน 🌸</p>
+        </div>
+    </div>
+</body>
+</html>
